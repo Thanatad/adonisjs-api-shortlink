@@ -1,0 +1,35 @@
+/api/v1/url:
+  post:
+    tags:
+      - UrlLink
+    requestBody:
+      required: true
+      content:
+        application/json:
+          description: User payload
+          schema:
+            type: object
+            properties:
+              url:
+                type: string
+                example: "https://google.com"
+                required: true
+    produces:
+      - application/json
+    responses:
+      200:
+        description: Success
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UrlLink"
+      400:
+        description: Bad Request
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: "URL is valid or exit"

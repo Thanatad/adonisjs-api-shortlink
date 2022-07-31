@@ -1,0 +1,20 @@
+components:
+  schemas:
+    UrlLink:
+      type: object
+      properties:
+        id:
+          type: number
+        url:
+          type: string
+          example: 'https://google.com'
+        code:
+          type: string
+          example: 'cWs4XD-Ys'
+        base_url:
+          type: string
+          example: 'http://localhost:3333'
+        created_at:
+          type: string
+          format: date-time
+
